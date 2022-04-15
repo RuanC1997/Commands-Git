@@ -1,0 +1,159 @@
+                                  Comandos Git sietma Linux.
+
+
+Git status: Lista arquivos a serem comitados.
+
+Mkdir + "Nome da Pasta": Para criar um repositório "pasta".
+
+Git Init: Utilizado para inicializar o rapositório "pasta".
+
+Cd + "Nome da Pasta": Abrir o repositório "pasta".
+
+Cd ..: Sair do repositório "pasta".
+
+Vim ou vi + "Nome do arquivo": Usado para editar docummentos direto no terminal do Git. 
+
+Git diff: Visualizar o que foi editado "escrito" no arquivo.
+
+Git diff --name -only: Mostra somente o nome do arquivo que foi editado. 
+
+Git add "Nome do arquivo": Mudar de Untracked para UnModified ou até comitar o arquivo. Depois de ter adicionado um novo arquivo. 
+
+Git add . : Vai adicionar todos os arquivos que precisarem ser adicionados de uma vez só. 
+
+Git mv "Nome do arquivo": Mover o arquivo específico para outra pasta.
+
+Git commit -m + "Mensagem para o arquivo" ou Git commit + "Mensagem para o arquivo": Utilizado para comitar o arquivo e adicionar uma mensagem ao mesmo, para "identificar "Especifícar" ", o commit feito.
+
+Git reset head: Para retirar do Unstage, antes de comitar o arquivo.
+
+Git checkout + "Nome do arquivo": Refazer arquivo/Apagar última edição feita no arquivo. "Arquivo modificado".
+
+Git restore "Nome do arquivo": Recuperar um arquivo já comitado que foi excluído.
+
+Git rm --cached "Nome do arquivo": Retorna um arquivo que já está pronto para se comitado ao Unstage.
+
+rm + "Nome do arquivo": Excluir arquivo específico 
+
+rm -v + "Nome do repositório": Excluir o repositório específico. 
+
+Git reset --soft + "Rach do commit": Retorna somente o commit, deixa no Unstage Prontinho para ser comitado de novo;
+Rach do commit: Um commit anterior ao que você quer mudar.
+
+Git reset --mixed + "Rach do commit": Mata o commit e deixa o mesmo em Modified.
+Rach do commit: Um commit anterior ao que você quer mudar.
+
+Git reset --hard + "Rach do commit": Mata o commit e volta para o ponto em que você definiu. 
+Rach do commit: Um commit anterior ao que você quer mudar.
+
+Git clone + "Url do Projeto": Clonar seu projeto do repositório remoto para o local.
+
+Git remote add "Nome do repositório + url do repositório remoto":
+
+Git remote: Mostrar seus repositórios remotos.
+
+Git remote -v: Mostra informações mais detalhadas do remoto.
+
+Git stash: Serve para guardar modificações que ainda não foram comitadas, quando nescessário pode trazer de volta.
+
+Git stash apply: Trazer o arquivo de volta.
+
+Git stah list: Lista os arquivo que estão no stash.
+
+Git stash clear: Limpa todos os arquivos que estão no stash.
+
+Git tag: Lista todas as tags.
+
+Git tag -a "Versão da tag" -m "Mensagem que vai ir":
+
+Git tag -d "Versão da tag": Exclui a tag específica.
+
+Git push "Repositório remoto" "Branch" --tags : Serve para subir a tag ao repositório remoto;
+Ex.: git push origin master --tags 
+
+Git push origin :"Versão da tag" : Excluir tag do remoto
+
+Git push origin :"Branch" remoto : Excluir uma branch do remoto.
+
+Git reverge + "Rach do commit": Serve para reverter o commit, mas não apaga o anterior;
+Rach do commit, uma rach anterior ao commit feito.
+
+Git push origin master: Serve para enviar os arquivos ao remoto.
+
+Git push -u "Repositório Remoto" "Branch": Serve para enviar os arquivos ao remoto;
+"-u" serve somente para salvar, na próxima vez é só digitar "git push".
+Ex.: git push -u origin master, "origin, Repositório" "master, Branch"
+
+
+
+
+                                 Unindo Branch´s 
+
+Passo a passo Merge: Para terminar o merge precisa-se criar um novo commit;
+o commit é criado automático quando feito;
+Git merge "branch": Branch aquela onde os arquivos se encontram.
+
+Prós: Operação não destrutiva;
+
+Contras: Commit extra, Histórico poluído.
+
+Passo a passo Rebase: Vai mover o commit feito para a frente deixando tudo linear;
+Git rebase "Branch": Branch aquela onde os arquivos se encontram.
+
+Prós: Evita commits extras, Histórico linear.
+
+Contra: Perde a ordem cronológica.
+
+                                 Git log 
+
+
+Git log: Mostra a rach do commit, o autor, o email, a data e a  mensagem do commit.
+
+Git log decorate: Mostra de qual branch veio e foi, se teve um merge.
+
+Git log --author= "Nome do autor": Vai listar todos os commits daquele autor.
+
+Git shortlog: Mostra em ordem alfábetica quais foram os autores, quantidades de commit e quais foram.
+
+Git shortlog --sn: Vai mostrar a quantidade de commits e quais autores.
+
+Git log --graph: Vai mostrar em forma gráfica o que está acontecendo com as branchs e versões.
+
+Git show + "rach do commit": Vai mostrar outras informações do commit;
+Saber o que foi feito naquele commit;
+Rach: Sequência de letras e números adiquiridos pelo git log.
+                                 
+
+
+                                 Branch`s 
+
+Git checkout -b "Nome da Branch": Cria uma branch e alterna para a mesma.
+
+Git branch: Lista suas branch´s.
+
+Git branch -d "Nome da branch": Exclui a branch especificada.
+
+Git branch "Nome da Branch": Cria uma nova branch.
+
+git checkout "Nome da Branch": Alterna de branch.
+
+                                 Configurações do Git
+
+Git config --global user.name + "Nome que for usar": Serve para salvar o nome no terminal
+
+Git config user.name: Serve para ver o nome do terminal.
+
+Git config --global user.email + "Email que for usar": Serve para salvar o email no terminal.
+
+Git config user.email: serve para ver o email que está no terminal. 
+
+Git config --list: Para ver Tudo.
+
+Git config --global alias."Letra" "Comando": Serve para abreviar um comando
+Ex.: git config --global alias.s status.
+
+
+Fork: Copia o repositório de outra pessoa, e faz uma cópia para você.
+
+Pull request: Solicitação de código para enviar o projeto de volta ao dono;
+E ou receber um código de volta.
